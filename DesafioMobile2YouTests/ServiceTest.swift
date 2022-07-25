@@ -1,14 +1,13 @@
 //
-//  DesafioMobile2YouTests.swift
+//  ServiceTest.swift
 //  DesafioMobile2YouTests
 //
-//  Created by Victor Henrique Caliope Soares on 22/07/22.
+//  Created by Victor Henrique Caliope Soares on 25/07/22.
 //
 
 import XCTest
-@testable import DesafioMobile2You
 
-class DesafioMobile2YouTests: XCTestCase {
+class ServiceTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

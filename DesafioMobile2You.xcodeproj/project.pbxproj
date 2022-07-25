@@ -11,7 +11,13 @@
 		220FF536288B335D00865BC1 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220FF535288B335D00865BC1 /* MovieDetailsView.swift */; };
 		220FF538288B335E00865BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220FF537288B335E00865BC1 /* Assets.xcassets */; };
 		220FF53B288B335E00865BC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220FF53A288B335E00865BC1 /* Preview Assets.xcassets */; };
-		220FF545288B335E00865BC1 /* DesafioMobile2YouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220FF544288B335E00865BC1 /* DesafioMobile2YouTests.swift */; };
+		224E0303288EDCDC004981BE /* MovieServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E0302288EDCDC004981BE /* MovieServices.swift */; };
+		224E0309288EDFBF004981BE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E0308288EDFBF004981BE /* Movie.swift */; };
+		224E030B288EEC56004981BE /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E030A288EEC56004981BE /* MovieModel.swift */; };
+		224E030D288EEFAE004981BE /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E030C288EEFAE004981BE /* Genres.swift */; };
+		224E030F288EF2AF004981BE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E030E288EF2AF004981BE /* Service.swift */; };
+		224E0311288EF791004981BE /* MovieError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E0310288EF791004981BE /* MovieError.swift */; };
+		224E0313288F0182004981BE /* ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E0312288F0182004981BE /* ServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +44,14 @@
 		220FF537288B335E00865BC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		220FF53A288B335E00865BC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		220FF540288B335E00865BC1 /* DesafioMobile2YouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioMobile2YouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		220FF544288B335E00865BC1 /* DesafioMobile2YouTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioMobile2YouTests.swift; sourceTree = "<group>"; };
 		220FF54A288B335E00865BC1 /* DesafioMobile2YouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioMobile2YouUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		224E0302288EDCDC004981BE /* MovieServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServices.swift; sourceTree = "<group>"; };
+		224E0308288EDFBF004981BE /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = DesafioMobile2You/Services/Movie.swift; sourceTree = SOURCE_ROOT; };
+		224E030A288EEC56004981BE /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		224E030C288EEFAE004981BE /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
+		224E030E288EF2AF004981BE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		224E0310288EF791004981BE /* MovieError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieError.swift; sourceTree = "<group>"; };
+		224E0312288F0182004981BE /* ServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,7 @@
 		220FF532288B335D00865BC1 /* DesafioMobile2You */ = {
 			isa = PBXGroup;
 			children = (
+				224E0301288EDCC4004981BE /* Services */,
 				220FF561288B698200865BC1 /* Model */,
 				220FF560288B697A00865BC1 /* ViewModel */,
 				220FF55F288B696100865BC1 /* Resources */,
@@ -109,7 +122,7 @@
 		220FF543288B335E00865BC1 /* DesafioMobile2YouTests */ = {
 			isa = PBXGroup;
 			children = (
-				220FF544288B335E00865BC1 /* DesafioMobile2YouTests.swift */,
+				224E0312288F0182004981BE /* ServiceTest.swift */,
 			);
 			path = DesafioMobile2YouTests;
 			sourceTree = "<group>";
@@ -143,14 +156,27 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = ViewModel;
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		220FF561288B698200865BC1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				224E0308288EDFBF004981BE /* Movie.swift */,
+				224E030A288EEC56004981BE /* MovieModel.swift */,
+				224E030C288EEFAE004981BE /* Genres.swift */,
 			);
-			path = Model;
+			name = Model;
+			sourceTree = "<group>";
+		};
+		224E0301288EDCC4004981BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				224E0302288EDCDC004981BE /* MovieServices.swift */,
+				224E030E288EF2AF004981BE /* Service.swift */,
+				224E0310288EF791004981BE /* MovieError.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				220FF536288B335D00865BC1 /* MovieDetailsView.swift in Sources */,
+				224E030F288EF2AF004981BE /* Service.swift in Sources */,
+				224E030B288EEC56004981BE /* MovieModel.swift in Sources */,
+				224E030D288EEFAE004981BE /* Genres.swift in Sources */,
+				224E0303288EDCDC004981BE /* MovieServices.swift in Sources */,
+				224E0311288EF791004981BE /* MovieError.swift in Sources */,
+				224E0309288EDFBF004981BE /* Movie.swift in Sources */,
 				220FF534288B335D00865BC1 /* DesafioMobile2YouApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				220FF545288B335E00865BC1 /* DesafioMobile2YouTests.swift in Sources */,
+				224E0313288F0182004981BE /* ServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +472,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DesafioMobile2You/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DesafioMobile2You/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 53RZF4C2P7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -469,7 +501,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DesafioMobile2You/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DesafioMobile2You/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 53RZF4C2P7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
