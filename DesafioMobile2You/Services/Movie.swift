@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct Movie: Decodable {
+struct Movie: Decodable, Identifiable {
     var id: Int
-    var genres: [Genres]?
-    var title: String?
+    var genre_ids: [Int]?
+    var title: String
     var popularity: Float?
     var poster_path: String?
     var vote_count: Int?
     var release_date: String?
-    
-    
+        
     var urlImage: String{
         return "https://image.tmdb.org/t/p/original/\(poster_path ?? "")"
     }
+    
 }

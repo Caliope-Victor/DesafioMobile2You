@@ -8,6 +8,7 @@
 import Foundation
 
 protocol Services {
+    func getAllGenres(with path: String, completion: @escaping (Result<Genres, MovieError>) -> ())
     func getMovie(with path: String, completion: @escaping (Result<Movie, MovieError>) -> ())
     func getSimilars(with path: String, completion: @escaping (Result<Movies, MovieError>) -> ())
 }
