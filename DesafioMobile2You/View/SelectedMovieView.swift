@@ -16,17 +16,26 @@ struct SelectedMovieView: View {
         ZStack(alignment: .bottom){
             AsyncImage(url: URL(string: viewModel.selectedMovie.urlImage)){ headerImage in
                
-                headerImage.image?
+                ((headerImage.image) ?? Image(uiImage: UIImage()))
                     .resizable()
-                    .frame(width: viewModel.frame.width, height: viewModel.frame.height * 0.55)
-                    .scaleEffect()
+                    .frame(width: viewModel.frame.width, height: viewModel.frame.height * 0.6)
+                    .scaledToFill()
             }
-            HStack{
-                VStack(alignment: .leading, spacing: 10){
+            VStack(alignment: .leading, spacing: 10){
+                HStack{
                     Text(viewModel.selectedMovie.title)
                         .font(.title2)
                         .fontWeight(.bold)
-
+                    Spacer()
+                    Button(action: {
+                        buttonPressed.toggle()
+                    }, label: {
+                        Image(systemName: buttonPressed ? "heart.fill" : "heart")
+                            .foregroundColor(Color(UIColor{
+                                $0.userInterfaceStyle == .dark ? .white : .black
+                            }))
+                    })
+                }
                     HStack(spacing: 15){
                         HStack(spacing: 5){
                             Image(systemName: "heart.fill")
@@ -41,16 +50,8 @@ struct SelectedMovieView: View {
                                 .fontWeight(.medium)
                         }
                     }.opacity(0.8)
-                }
-                Spacer()
-                Button(action: {
-                    buttonPressed.toggle()
-                }, label: {
-                    Image(systemName: buttonPressed ? "heart.fill" : "heart")
-                        .foregroundColor(Color(UIColor{
-                            $0.userInterfaceStyle == .dark ? .white : .black
-                        }))
-                })
+                
+                
             }
             .padding(.top, 70)
             .background( LinearGradient(gradient: Color.gradient, startPoint: .top, endPoint: .bottom))

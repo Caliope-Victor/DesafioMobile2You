@@ -11,7 +11,9 @@ import SwiftUI
 struct DesafioMobile2YouApp: App {
     var body: some Scene {
         WindowGroup {
-            MovieDetailsView(movieId: 756999) // The default movie: Thor love and thunder
+            NavigationView{
+                MovieDetailsView(movieId: 756999) // The default movie: Thor love and thunder
+            }
         }
     }
 }

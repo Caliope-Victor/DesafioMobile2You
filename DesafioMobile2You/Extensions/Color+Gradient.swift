@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 extension Color {
+    // Background gradient
     static var gradient: Gradient {
         let adaptableColor = Color(UIColor{
             $0.userInterfaceStyle == .dark ? .black : .white
@@ -31,5 +32,11 @@ extension Color {
         ])
         
         return gradient
+    }
+    // Color to adapt based on light or dark mode
+    static var adaptableColor: Color {
+        return Color(UIColor{
+            $0.userInterfaceStyle == .dark ? .white : .black
+        })
     }
 }

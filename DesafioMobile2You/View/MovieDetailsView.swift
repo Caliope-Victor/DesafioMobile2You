@@ -13,12 +13,11 @@ struct MovieDetailsView: View {
     var body: some View {
         ScrollView{
             SelectedMovieView(viewModel: viewModel)
-            Spacer()
+            SimilarMoviesCell(viewModel: viewModel)
         }
-        .onReceive(viewModel.$selectedMovie){_ in
+        .ignoresSafeArea()
+        .onAppear{
             viewModel.updateSelectedMovie(id: movieId)
-        }
-        .onReceive(viewModel.$similarMovies){ _ in
             viewModel.updateSimilarMovies(id: movieId)
         }
     }

@@ -13,14 +13,16 @@ final class MovieDetailsViewModel: ObservableObject {
     @Published var selectedMovie: Movie
     @Published var similarMovies: Movies
     private var service = MovieService()
+    private var allGenres:[Int:String] = [:]
     
     var frame = UIScreen.main.bounds
     
     init(){
         self.selectedMovie = Movie(id: 1, title: "Default")
         self.similarMovies = Movies(results: [])
-//        updateSimilarMovies(id: 616037) // Id of default movie
-//        updateSelectedMovie(id: 616037) // Id of default movie
+//        updateSimilarMovies(id: id) // update the selected movie
+//        updateSelectedMovie(id: id) // update de similar movies
+        getGenres()
     }
     
     func updateSelectedMovie(id: Int){
@@ -30,7 +32,7 @@ final class MovieDetailsViewModel: ObservableObject {
                 do{
                     self?.selectedMovie = try result.get()
                 }catch{
-                    print(error)
+                    print(error.localizedDescription)
                 }
             }
             
@@ -44,10 +46,36 @@ final class MovieDetailsViewModel: ObservableObject {
                 do{
                     self?.similarMovies = try result.get()
                 }catch{
-                    print(error)
+                    print(error.localizedDescription)
                 }
             }
         }
+    }
+    
+    func getGenres() {
+        let defaultURL = "https://api.themoviedb.org/3/genre/movie/list?api_key=661d55cc6c18bbd24bfb56171d197d74&language=en-US"
+        let service = MovieService()
+        do{
+            service.getAllGenres(with: defaultURL, completion: { [weak self] result in
+                switch result {
+                case .success(let genres):
+                    genres.genres?.forEach { genre in
+                        self?.allGenres[genre.id] = genre.name
+                    }
+//                    self?.objectWillChange.send()
+                case .failure:
+                    break
+                }
+            })
+        }
+    }
+    
+    func formatteGenres(ids: [Int]) -> String{
+        var format = [String]()
+        ids.forEach { id in
+            format.append(allGenres[id] ?? "")
+        }
+        return format.joined(separator: ", ")
     }
     
 }
