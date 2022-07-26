@@ -9,8 +9,8 @@ import Foundation
 
 struct Movie: Decodable {
     var id: Int
-    var genres: [Genres]?
-    var title: String?
+    var genres: [Genre]?
+    var title: String
     var popularity: Float?
     var poster_path: String?
     var vote_count: Int?

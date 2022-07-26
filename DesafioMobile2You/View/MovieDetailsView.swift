@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct MovieDetailsView: View {
+    @StateObject private var viewModel = MovieDetailsViewModel()
+    var movieId: Int
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ScrollView{
+            SelectedMovieView(viewModel: viewModel)
+            Spacer()
+        }
+        .onReceive(viewModel.$selectedMovie){_ in
+            viewModel.updateSelectedMovie(id: movieId)
+        }
+        .onReceive(viewModel.$similarMovies){ _ in
+            viewModel.updateSimilarMovies(id: movieId)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailsView()
+        MovieDetailsView(movieId: 616037)
     }
 }

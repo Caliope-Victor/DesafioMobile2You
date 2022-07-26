@@ -21,7 +21,7 @@ class MovieService: Services {
                 completion(.failure(.dataIsEmpty))
                 return
             }
-            guard let _ = error else {
+            guard error == nil else {
                 completion(.failure(.errorNotNil))
                 return
             }
@@ -47,7 +47,7 @@ class MovieService: Services {
                 completion(.failure(.dataIsEmpty))
                 return
             }
-            guard let _ = error else {
+            guard error == nil else {
                 completion(.failure(.errorNotNil))
                 return
             }
