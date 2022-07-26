@@ -22,10 +22,6 @@ struct MovieDetailsView: View {
         .onReceive(viewModel.$similarMovies, perform: { _ in
             viewModel.updateSimilarMovies(id: movieId)
         })
-//        .onAppear{
-//            viewModel.updateSelectedMovie(id: movieId)
-//            viewModel.updateSimilarMovies(id: movieId)
-//        }
     }
 }
 

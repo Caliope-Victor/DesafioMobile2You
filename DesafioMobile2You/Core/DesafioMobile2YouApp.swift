@@ -12,7 +12,7 @@ struct DesafioMobile2YouApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                MovieDetailsView(movieId: 756999) // The default movie: Thor love and thunder
+                MovieDetailsView(movieId: 756999) // The default movie
             }
         }
     }

@@ -14,15 +14,17 @@ final class MovieDetailsViewModel: ObservableObject {
     @Published var similarMovies: Movies
     private var service = MovieService()
     private var allGenres:[Int:String] = [:]
-    
     var frame = UIScreen.main.bounds
     
+    /// Set default values and searching the genres
     init(){
         self.selectedMovie = Movie(id: 1, title: "Default")
         self.similarMovies = Movies(results: [])
         getGenres()
     }
     
+    /// Update the selected movie
+    /// - Parameter id: id of the selected movie
     func updateSelectedMovie(id: Int){
         let defaultURL = "https://api.themoviedb.org/3/movie/\(id)?api_key=526413961b6de91fefe105d4abb81eea&language=pt-BR"
         service.getMovie(with: defaultURL) { [weak self] result in
@@ -33,10 +35,11 @@ final class MovieDetailsViewModel: ObservableObject {
                     print(error.localizedDescription)
                 }
             }
-            
         }
     }
     
+    /// Update the similar movies
+    /// - Parameter id: id of the selected movie to get the similar movies
     func updateSimilarMovies(id: Int){
         let defaultURL = "https://api.themoviedb.org/3/movie/\(id)/similar?api_key=526413961b6de91fefe105d4abb81eea&language=pt-BR"
         service.getSimilars(with: defaultURL){ [weak self] result in
@@ -50,6 +53,7 @@ final class MovieDetailsViewModel: ObservableObject {
         }
     }
     
+    /// Getting the genders
     func getGenres() {
         let defaultURL = "https://api.themoviedb.org/3/genre/movie/list?api_key=661d55cc6c18bbd24bfb56171d197d74&language=en-US"
         let service = MovieService()
@@ -67,6 +71,9 @@ final class MovieDetailsViewModel: ObservableObject {
         }
     }
     
+    /// Format the genders to the pattern
+    /// - Parameter ids: All ids
+    /// - Returns: The formatted genders
     func formatteGenres(ids: [Int]) -> String{
         var format = [String]()
         ids.forEach { id in
