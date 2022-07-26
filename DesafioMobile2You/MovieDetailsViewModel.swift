@@ -20,8 +20,6 @@ final class MovieDetailsViewModel: ObservableObject {
     init(){
         self.selectedMovie = Movie(id: 1, title: "Default")
         self.similarMovies = Movies(results: [])
-//        updateSimilarMovies(id: id) // update the selected movie
-//        updateSelectedMovie(id: id) // update de similar movies
         getGenres()
     }
     
@@ -62,7 +60,6 @@ final class MovieDetailsViewModel: ObservableObject {
                     genres.genres?.forEach { genre in
                         self?.allGenres[genre.id] = genre.name
                     }
-//                    self?.objectWillChange.send()
                 case .failure:
                     break
                 }
@@ -77,5 +74,4 @@ final class MovieDetailsViewModel: ObservableObject {
         }
         return format.joined(separator: ", ")
     }
-    
 }

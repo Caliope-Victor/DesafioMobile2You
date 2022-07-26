@@ -28,7 +28,7 @@ struct SimilarMoviesCell: View {
                                 .lineLimit(1)
                                 .foregroundColor(.adaptableColor)
                             HStack{
-                                Text(movie.release_date ?? "")
+                                Text(movie.release_date?.prefix(4) ?? "")
                                     .font(.caption)
                                     .foregroundColor(.adaptableColor)
                                 Text(viewModel.formatteGenres(ids: movie.genre_ids ?? []))

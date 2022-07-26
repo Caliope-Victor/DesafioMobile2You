@@ -16,10 +16,16 @@ struct MovieDetailsView: View {
             SimilarMoviesCell(viewModel: viewModel)
         }
         .ignoresSafeArea()
-        .onAppear{
+        .onReceive(viewModel.$selectedMovie, perform: { _ in
             viewModel.updateSelectedMovie(id: movieId)
+        })
+        .onReceive(viewModel.$similarMovies, perform: { _ in
             viewModel.updateSimilarMovies(id: movieId)
-        }
+        })
+//        .onAppear{
+//            viewModel.updateSelectedMovie(id: movieId)
+//            viewModel.updateSimilarMovies(id: movieId)
+//        }
     }
 }
 
