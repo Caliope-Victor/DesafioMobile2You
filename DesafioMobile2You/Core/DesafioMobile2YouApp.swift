@@ -11,7 +11,9 @@ import SwiftUI
 struct DesafioMobile2YouApp: App {
     var body: some Scene {
         WindowGroup {
-            MovieDetailsView()
+            NavigationView{
+                MovieDetailsView(movieId: 155) // The default movie
+            }
         }
     }
 }
