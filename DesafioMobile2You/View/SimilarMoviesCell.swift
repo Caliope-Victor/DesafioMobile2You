@@ -15,7 +15,7 @@ struct SimilarMoviesCell: View {
                 NavigationLink(destination: MovieDetailsView(movieId: movie.id)){
                     HStack(alignment: .center){
                         AsyncImage(url: URL(string: movie.urlImage)) { image in
-                            (image.image ?? Image(systemName: ""))
+                            (image.image ?? Image(uiImage: UIImage()))
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: viewModel.frame.width * 0.14)

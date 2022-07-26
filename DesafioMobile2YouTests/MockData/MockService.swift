@@ -9,7 +9,7 @@ import Foundation
 @testable import DesafioMobile2You
 
 class MockService: Services {
-    
+
     func getAllGenres(with path: String, completion: @escaping (Result<Genres, MovieError>) -> ()) {
         guard let completPath = Bundle(for: MockService.self).path(forResource: path, ofType: "json") else {
             completion(.failure(.dataIsEmpty))
