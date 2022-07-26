@@ -7,14 +7,14 @@
 
 import Foundation
 
-class Service: MovieServices {
+class MovieService: Services {
     
     /// Get the information of a movie
     /// - Parameters:
     ///   - id: The movie id
     ///   - completion: Return the result of the request <Movie, MovieError>
-    func getmovie(with id: Int, completion: @escaping (Result<Movie, MovieError>) -> ()) {
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/\(id)?api_key=526413961b6de91fefe105d4abb81eea&language=pt-BR") else { return }
+    func getMovie(with path: String, completion: @escaping (Result<Movie, MovieError>) -> ()) {
+        guard let url = URL(string: path) else { return }
         
         URLSession.shared.dataTask(with: url) {data, _, error in
             guard let data = data else {
@@ -39,8 +39,8 @@ class Service: MovieServices {
     /// - Parameters:
     ///   - id: The movie id
     ///   - completion: Return the result of the request <[Movie], MovieError>
-    func getSimilars(with id: Int, completion: @escaping (Result<[Movie], MovieError>) -> ()) {
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/\(id)/similar?api_key=526413961b6de91fefe105d4abb81eea&language=pt-BR") else { return }
+    func getSimilars(with path: String, completion: @escaping (Result<Movies, MovieError>) -> ()) {
+        guard let url = URL(string: path) else { return }
         
         URLSession.shared.dataTask(with: url) {data, _, error in
             guard let data = data else {
@@ -53,7 +53,7 @@ class Service: MovieServices {
             }
             do{
                 let decoder = JSONDecoder()
-                let result = try decoder.decode([Movie].self, from: data)
+                let result = try decoder.decode(Movies.self, from: data)
                 completion(.success(result))
             } catch {
                 completion(.failure(.dataNotLoaded))

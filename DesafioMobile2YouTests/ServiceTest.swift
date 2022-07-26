@@ -6,30 +6,98 @@
 //
 
 import XCTest
+@testable import DesafioMobile2You
 
 class ServiceTest: XCTestCase {
 
+    var service: Services!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        service = MockService()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        service = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    //MARK: testing getMovie
+    
+    // Test if decoding is working
+    func testCanDecode() throws {
+        service.getMovie(with: "MockMovie"){ result in
+            switch result {
+            case .success(let movie):
+                XCTAssertNotNil(movie)
+                XCTAssertEqual(movie.id, 616037)
+            case .failure(let error):
+                XCTAssertNil(error)
+                
+            }
+        }
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    // Test if is not passing without a valid path
+    func testEmptyData() throws {
+        service.getMovie(with: "invalid path") { result in
+            switch result {
+            case .success(let movie):
+                XCTAssertNil(movie)
+            case .failure(let error):
+                XCTAssertEqual(error, .dataIsEmpty)
+            }
         }
     }
 
+    // Test an path with invalid data
+    func testDataNotLoad() throws{
+        service.getMovie(with: "MockEmpty") { result in
+            switch result {
+            case .success(let movie):
+                XCTAssertNil(movie)
+            case .failure(let error):
+                XCTAssertEqual(error, .dataNotLoaded)
+            }
+        }
+
+    }
+    
+    //MARK: testing getSimilars
+    
+    // Test if decoding on getting similars is working
+    func testSimilarsCanDecode() throws {
+        service.getSimilars(with: "MockSimilars"){ result in
+            switch result {
+            case .success(let movie):
+                XCTAssertNotNil(movie)
+            case .failure(let error):
+                XCTAssertNil(error)
+                
+            }
+        }
+    }
+    
+    // Test if is not passing without a valid path
+    func testSimilarsEmptyData() throws {
+        service.getSimilars(with: "invalid path") { result in
+            switch result {
+            case .success(let movie):
+                XCTAssertNil(movie)
+            case .failure(let error):
+                XCTAssertEqual(error, .dataIsEmpty)
+            }
+        }
+    }
+
+    // Test an path with invalid data
+    func testSimilarsDataNotLoad() throws{
+        service.getSimilars(with: "MockEmpty") { result in
+            switch result {
+            case .success(let movie):
+                XCTAssertNil(movie)
+            case .failure(let error):
+                XCTAssertEqual(error, .dataNotLoaded)
+            }
+        }
+
+    }
 }

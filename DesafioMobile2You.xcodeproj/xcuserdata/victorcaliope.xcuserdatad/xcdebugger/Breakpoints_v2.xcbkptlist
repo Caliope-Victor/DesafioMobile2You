@@ -3,4 +3,182 @@
    uuid = "43A1F3F2-B236-4EF9-8091-7707FF452389"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCB49C3B-3E05-4379-922D-F699C95863D6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DesafioMobile2YouTests/ServiceTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "testCanDecode()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DCB49C3B-3E05-4379-922D-F699C95863D6 - 28e99aba1560291"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DesafioMobile2You.Movie, DesafioMobile2You.MovieError&gt;) -&gt; () in DesafioMobile2YouTests.ServiceTest.testCanDecode() throws -&gt; ()"
+                  moduleName = "DesafioMobile2YouTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorcaliope/Desktop/DesafioMobile2You/DesafioMobile2YouTests/ServiceTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "662">
+               </Location>
+               <Location
+                  uuid = "DCB49C3B-3E05-4379-922D-F699C95863D6 - 28e99aba15602b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DesafioMobile2You.Movie, DesafioMobile2You.MovieError&gt;) -&gt; () in DesafioMobile2YouTests.ServiceTest.testCanDecode() throws -&gt; ()"
+                  moduleName = "DesafioMobile2YouTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorcaliope/Desktop/DesafioMobile2You/DesafioMobile2YouTests/ServiceTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "715">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC5742EE-F501-40A8-AE8C-BBD96AC85160"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DesafioMobile2YouTests/ServiceTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "testCanDecode()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BC5742EE-F501-40A8-AE8C-BBD96AC85160 - 28e99aba1560270"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DesafioMobile2You.Movie, DesafioMobile2You.MovieError&gt;) -&gt; () in DesafioMobile2YouTests.ServiceTest.testCanDecode() throws -&gt; ()"
+                  moduleName = "DesafioMobile2YouTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorcaliope/Desktop/DesafioMobile2You/DesafioMobile2YouTests/ServiceTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "438">
+               </Location>
+               <Location
+                  uuid = "BC5742EE-F501-40A8-AE8C-BBD96AC85160 - 28e99aba1560270"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DesafioMobile2You.Movie, DesafioMobile2You.MovieError&gt;) -&gt; () in DesafioMobile2YouTests.ServiceTest.testCanDecode() throws -&gt; ()"
+                  moduleName = "DesafioMobile2YouTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorcaliope/Desktop/DesafioMobile2You/DesafioMobile2YouTests/ServiceTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F26AFFA4-21D5-4DA0-A8F3-5DF7891EF3D3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DesafioMobile2YouTests/MockData/MockService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getMovie(with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F26AFFA4-21D5-4DA0-A8F3-5DF7891EF3D3 - 349ae98e6bdefdca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DesafioMobile2YouTests.MockService.getMovie(with: Swift.String, completion: (Swift.Result&lt;DesafioMobile2You.Movie, DesafioMobile2You.MovieError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DesafioMobile2YouTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorcaliope/Desktop/DesafioMobile2You/DesafioMobile2YouTests/MockData/MockService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "1859">
+               </Location>
+               <Location
+                  uuid = "F26AFFA4-21D5-4DA0-A8F3-5DF7891EF3D3 - 349ae98e6bdefda5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DesafioMobile2YouTests.MockService.getMovie(with: Swift.String, completion: (Swift.Result&lt;DesafioMobile2You.Movie, DesafioMobile2You.MovieError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DesafioMobile2YouTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorcaliope/Desktop/DesafioMobile2You/DesafioMobile2YouTests/MockData/MockService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "1852">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7731CCD-C7A5-4875-A810-C12914F47766"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DesafioMobile2YouTests/ServiceTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "ServiceTest"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7BAE75F-60C6-44AE-B857-1222720B694A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DesafioMobile2YouTests/ServiceTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "testCanDecode()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

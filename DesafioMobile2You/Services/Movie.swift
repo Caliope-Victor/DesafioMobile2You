@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Movie: MovieModel {
-    var id: Int?
+struct Movie: Decodable {
+    var id: Int
     var genres: [Genres]?
     var title: String?
-    var popularity: String?
+    var popularity: Float?
     var poster_path: String?
     var vote_count: Int?
     var release_date: String?

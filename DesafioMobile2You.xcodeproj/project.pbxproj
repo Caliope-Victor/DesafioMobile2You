@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220D1D81288F93D4009B450A /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220D1D80288F93D4009B450A /* Movies.swift */; };
 		220FF534288B335D00865BC1 /* DesafioMobile2YouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220FF533288B335D00865BC1 /* DesafioMobile2YouApp.swift */; };
 		220FF536288B335D00865BC1 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220FF535288B335D00865BC1 /* MovieDetailsView.swift */; };
 		220FF538288B335E00865BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220FF537288B335E00865BC1 /* Assets.xcassets */; };
 		220FF53B288B335E00865BC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220FF53A288B335E00865BC1 /* Preview Assets.xcassets */; };
-		224E0303288EDCDC004981BE /* MovieServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E0302288EDCDC004981BE /* MovieServices.swift */; };
+		224E0303288EDCDC004981BE /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E0302288EDCDC004981BE /* Services.swift */; };
 		224E0309288EDFBF004981BE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E0308288EDFBF004981BE /* Movie.swift */; };
-		224E030B288EEC56004981BE /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E030A288EEC56004981BE /* MovieModel.swift */; };
 		224E030D288EEFAE004981BE /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E030C288EEFAE004981BE /* Genres.swift */; };
-		224E030F288EF2AF004981BE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E030E288EF2AF004981BE /* Service.swift */; };
+		224E030F288EF2AF004981BE /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E030E288EF2AF004981BE /* MovieService.swift */; };
 		224E0311288EF791004981BE /* MovieError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E0310288EF791004981BE /* MovieError.swift */; };
 		224E0313288F0182004981BE /* ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E0312288F0182004981BE /* ServiceTest.swift */; };
+		224E0315288F683B004981BE /* MockMovie.json in Resources */ = {isa = PBXBuildFile; fileRef = 224E0314288F683B004981BE /* MockMovie.json */; };
+		224E031A288F689B004981BE /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E0319288F689B004981BE /* MockService.swift */; };
+		224E031E288F713C004981BE /* MockSimilars.json in Resources */ = {isa = PBXBuildFile; fileRef = 224E031D288F713C004981BE /* MockSimilars.json */; };
+		224E0320288F79D8004981BE /* MockEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = 224E031F288F79D8004981BE /* MockEmpty.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,30 +32,26 @@
 			remoteGlobalIDString = 220FF52F288B335D00865BC1;
 			remoteInfo = DesafioMobile2You;
 		};
-		220FF54B288B335E00865BC1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 220FF528288B335D00865BC1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 220FF52F288B335D00865BC1;
-			remoteInfo = DesafioMobile2You;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220D1D80288F93D4009B450A /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		220FF530288B335D00865BC1 /* DesafioMobile2You.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioMobile2You.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		220FF533288B335D00865BC1 /* DesafioMobile2YouApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioMobile2YouApp.swift; sourceTree = "<group>"; };
 		220FF535288B335D00865BC1 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		220FF537288B335E00865BC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		220FF53A288B335E00865BC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		220FF540288B335E00865BC1 /* DesafioMobile2YouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioMobile2YouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		220FF54A288B335E00865BC1 /* DesafioMobile2YouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioMobile2YouUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		224E0302288EDCDC004981BE /* MovieServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServices.swift; sourceTree = "<group>"; };
+		224E0302288EDCDC004981BE /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		224E0308288EDFBF004981BE /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = DesafioMobile2You/Services/Movie.swift; sourceTree = SOURCE_ROOT; };
-		224E030A288EEC56004981BE /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		224E030C288EEFAE004981BE /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
-		224E030E288EF2AF004981BE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		224E030E288EF2AF004981BE /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		224E0310288EF791004981BE /* MovieError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieError.swift; sourceTree = "<group>"; };
 		224E0312288F0182004981BE /* ServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTest.swift; sourceTree = "<group>"; };
+		224E0314288F683B004981BE /* MockMovie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = MockMovie.json; path = MockData/MockMovie.json; sourceTree = "<group>"; };
+		224E0319288F689B004981BE /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockService.swift; path = MockData/MockService.swift; sourceTree = "<group>"; };
+		224E031D288F713C004981BE /* MockSimilars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = MockSimilars.json; path = MockData/MockSimilars.json; sourceTree = "<group>"; };
+		224E031F288F79D8004981BE /* MockEmpty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = MockEmpty.json; path = MockData/MockEmpty.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +63,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		220FF53D288B335E00865BC1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		220FF547288B335E00865BC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,7 +86,6 @@
 			children = (
 				220FF530288B335D00865BC1 /* DesafioMobile2You.app */,
 				220FF540288B335E00865BC1 /* DesafioMobile2YouTests.xctest */,
-				220FF54A288B335E00865BC1 /* DesafioMobile2YouUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +114,7 @@
 		220FF543288B335E00865BC1 /* DesafioMobile2YouTests */ = {
 			isa = PBXGroup;
 			children = (
+				224E0317288F687E004981BE /* MockData */,
 				224E0312288F0182004981BE /* ServiceTest.swift */,
 			);
 			path = DesafioMobile2YouTests;
@@ -163,8 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				224E0308288EDFBF004981BE /* Movie.swift */,
-				224E030A288EEC56004981BE /* MovieModel.swift */,
 				224E030C288EEFAE004981BE /* Genres.swift */,
+				220D1D80288F93D4009B450A /* Movies.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -172,11 +165,22 @@
 		224E0301288EDCC4004981BE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				224E0302288EDCDC004981BE /* MovieServices.swift */,
-				224E030E288EF2AF004981BE /* Service.swift */,
+				224E0302288EDCDC004981BE /* Services.swift */,
+				224E030E288EF2AF004981BE /* MovieService.swift */,
 				224E0310288EF791004981BE /* MovieError.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		224E0317288F687E004981BE /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				224E0314288F683B004981BE /* MockMovie.json */,
+				224E031D288F713C004981BE /* MockSimilars.json */,
+				224E031F288F79D8004981BE /* MockEmpty.json */,
+				224E0319288F689B004981BE /* MockService.swift */,
+			);
+			name = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,24 +221,6 @@
 			productReference = 220FF540288B335E00865BC1 /* DesafioMobile2YouTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		220FF549288B335E00865BC1 /* DesafioMobile2YouUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 220FF55A288B335E00865BC1 /* Build configuration list for PBXNativeTarget "DesafioMobile2YouUITests" */;
-			buildPhases = (
-				220FF546288B335E00865BC1 /* Sources */,
-				220FF547288B335E00865BC1 /* Frameworks */,
-				220FF548288B335E00865BC1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				220FF54C288B335E00865BC1 /* PBXTargetDependency */,
-			);
-			name = DesafioMobile2YouUITests;
-			productName = DesafioMobile2YouUITests;
-			productReference = 220FF54A288B335E00865BC1 /* DesafioMobile2YouUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -249,10 +235,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					220FF53F288B335E00865BC1 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 220FF52F288B335D00865BC1;
-					};
-					220FF549288B335E00865BC1 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 220FF52F288B335D00865BC1;
 					};
@@ -273,7 +255,6 @@
 			targets = (
 				220FF52F288B335D00865BC1 /* DesafioMobile2You */,
 				220FF53F288B335E00865BC1 /* DesafioMobile2YouTests */,
-				220FF549288B335E00865BC1 /* DesafioMobile2YouUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,13 +273,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		220FF548288B335E00865BC1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				224E0320288F79D8004981BE /* MockEmpty.json in Resources */,
+				224E0315288F683B004981BE /* MockMovie.json in Resources */,
+				224E031E288F713C004981BE /* MockSimilars.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,10 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				220FF536288B335D00865BC1 /* MovieDetailsView.swift in Sources */,
-				224E030F288EF2AF004981BE /* Service.swift in Sources */,
-				224E030B288EEC56004981BE /* MovieModel.swift in Sources */,
+				224E030F288EF2AF004981BE /* MovieService.swift in Sources */,
 				224E030D288EEFAE004981BE /* Genres.swift in Sources */,
-				224E0303288EDCDC004981BE /* MovieServices.swift in Sources */,
+				224E0303288EDCDC004981BE /* Services.swift in Sources */,
+				220D1D81288F93D4009B450A /* Movies.swift in Sources */,
 				224E0311288EF791004981BE /* MovieError.swift in Sources */,
 				224E0309288EDFBF004981BE /* Movie.swift in Sources */,
 				220FF534288B335D00865BC1 /* DesafioMobile2YouApp.swift in Sources */,
@@ -325,13 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				224E0313288F0182004981BE /* ServiceTest.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		220FF546288B335E00865BC1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				224E031A288F689B004981BE /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,11 +313,6 @@
 			isa = PBXTargetDependency;
 			target = 220FF52F288B335D00865BC1 /* DesafioMobile2You */;
 			targetProxy = 220FF541288B335E00865BC1 /* PBXContainerItemProxy */;
-		};
-		220FF54C288B335E00865BC1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 220FF52F288B335D00865BC1 /* DesafioMobile2You */;
-			targetProxy = 220FF54B288B335E00865BC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -563,42 +529,6 @@
 			};
 			name = Release;
 		};
-		220FF55B288B335E00865BC1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 53RZF4C2P7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Caliope.DesafioMobile2YouUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DesafioMobile2You;
-			};
-			name = Debug;
-		};
-		220FF55C288B335E00865BC1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 53RZF4C2P7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Caliope.DesafioMobile2YouUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DesafioMobile2You;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -625,15 +555,6 @@
 			buildConfigurations = (
 				220FF558288B335E00865BC1 /* Debug */,
 				220FF559288B335E00865BC1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		220FF55A288B335E00865BC1 /* Build configuration list for PBXNativeTarget "DesafioMobile2YouUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				220FF55B288B335E00865BC1 /* Debug */,
-				220FF55C288B335E00865BC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
